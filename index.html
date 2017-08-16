@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>移动端轮播demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <script src="zepto.min.js"></script>
+        <script src="slider.js"></script>
+        <style>
+          
+        </style>
+    </head>
+    <body>
+       <div  class="carousel">
+		<div  id="slider">
+			<a href="">
+			<img src='img/banner1.jpg'>
+			</a>
+			<a href="">
+			<img src='img/banner2.jpg'>
+            </a>
+            <a href="">
+			<img src='img/banner3.jpg'>
+			</a>
+		</div>
+			<ul id="nav"></ul>
+       </div>
+
+       <div  class="carousel">
+		<div  id="sliders">
+			<a href="">
+			<img src='img/banner1.jpg'>
+			</a>
+			<a href="">
+			<img src='img/banner2.jpg'>
+            </a>
+            <a href="">
+			<img src='img/banner3.jpg'>
+			</a>
+		</div>
+			<ul  id="navs"></ul>
+       </div>
+       
+           
+        <script>
+          var option = {
+              autoTime:5000,  //如果为0，取消自动轮播，默认为5秒
+              activeClass:"active",  //导航菜单选中样式，默认为active
+              parentClass:"carousel", //最高层元素的类名，默认为carousel
+              height:200  // 轮播高度  默认为200
+          }
+          slider("#slider","#nav",option);
+          slider("#sliders","#navs",option);
+        </script>
+    </body>
+</html>
